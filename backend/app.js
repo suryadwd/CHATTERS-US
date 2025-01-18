@@ -1,5 +1,6 @@
 import express from "express";
 const app = express();
+import cors from "cors"
 import cookieParser from "cookie-parser";
 import dotenv from "dotenv";
 import routeUser from "./routes/auth.routes.js";
@@ -10,8 +11,13 @@ import cloudinary from "./config/clouddb.js";
 app.use(express.json())
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
+app.use(cors({
+  origin:"http://localhost:5173/",
+  credentials:true
+}))
 app.use("/api/users", routeUser);
 app.use("/api/message", routeMessage);
+
 
 app.listen(process.env.PORT, () => {
   console.log(`connected on PORT ${process.env.PORT}`);
