@@ -144,14 +144,14 @@ const Login = () => {
 
       {/* Right Side */}
       <div className="relative flex items-center justify-center bg-gray-100">
-        {/* <video
+        <video
           className="h-full w-full object-cover"
           src="v2.mp4"
           muted
           autoPlay
           loop
-        ></video> */}
-        <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
+        ></video>
+        <div className="absolute inset-0 bg-black/20 flex items-center justify-center">
           <h1 className="text-white text-4xl font-bold">Welcome to World</h1>
         </div>
       </div>
