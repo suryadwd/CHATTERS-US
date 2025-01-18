@@ -107,6 +107,7 @@
     "socket.io-parser": "^4.2.4",
     "sparse-bitfield": "^3.0.3",
     "statuses": "^2.0.1",
+    "streamifier": "^0.1.1",
     "toidentifier": "^1.0.1",
     "tr46": "^5.0.0",
     "type-is": "^1.6.18",

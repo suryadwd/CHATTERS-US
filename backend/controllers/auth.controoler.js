@@ -1,6 +1,8 @@
 import bcrypt from "bcryptjs";
 import User from "../modals/user.model.js";
 import { genTokenSetCookies } from "../middleware/genTokCook.js";
+import streamifier from "streamifier"
+import cloudinary from "../config/cloudDb.js"
 
 export const signup = async (req, res) => {
   try {
