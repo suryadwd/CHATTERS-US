@@ -93,7 +93,7 @@ const Profile = () => {
             <div className="space-y-1.5">
               <div className="text-sm text-zinc-400 flex items-center gap-2">
                 <User className="w-4 h-4" />
-                Full Name
+                username
               </div>
               <input
                 type="text"
@@ -101,7 +101,7 @@ const Profile = () => {
                 onChange={(e) =>
                   setData({ ...data, username: e.target.value })
                 }
-                placeholder="Enter Full Name"
+                placeholder={`current :  ${authUser?.user?.username}   Press enter to change`}
                 className="p-2 w-full rounded-lg"
               />
             </div>
@@ -115,7 +115,7 @@ const Profile = () => {
                 type="email"
                 value={data.email}
                 onChange={(e) => setData({ ...data, email: e.target.value })}
-                placeholder="Enter Email"
+                placeholder={`current :  ${authUser?.user?.email}   Press enter to change`}
                 className="p-2 w-full rounded-lg"
               />
             </div>
