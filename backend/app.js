@@ -7,14 +7,18 @@ import routeUser from "./routes/auth.routes.js";
 import routeMessage from "./routes/mess.routes.js"
 dotenv.config();
 import { dbConnect } from "./config/db.js";
-import cloudinary from "./config/clouddb.js";
+import cloudinary from "./config/cloudDb.js";
 app.use(express.json())
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin:"http://localhost:5173/",
+
+const corsOption = {
+  origin:"http://localhost:5173",
   credentials:true
-}))
+}
+
+app.use(cors(corsOption));
+
 app.use("/api/users", routeUser);
 app.use("/api/message", routeMessage);
 

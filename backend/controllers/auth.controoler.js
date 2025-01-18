@@ -39,7 +39,7 @@ export const signup = async (req, res) => {
 
     genTokenSetCookies(payload, res);
 
-    return res.status(201).json({ success: true, message: "User created" });
+    return res.status(201).json({ success: true, message: "User created",newUser });
   } catch (error) {
     console.log(error);
   }
